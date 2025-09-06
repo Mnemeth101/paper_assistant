@@ -258,7 +258,7 @@ def filter_by_gpt(papers: List[Paper], base_prompt: str, criterion: str, postfix
             print(f"Full prompt length: {len(prompt)} characters")
             
             response = client.models.generate_content(
-                model="gemini-2.5-flash", 
+                model=config["SELECTION"]["model"], 
                 contents=prompt
             )
             
